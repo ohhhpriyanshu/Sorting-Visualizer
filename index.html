@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🚀 3D Algorithm Visualizer</h1>
+
+<div class="controls">
+    <button onclick="generateArray()">Generate</button>
+
+    <select id="algo" onchange="updateComplexity()">
+        <option>Bubble Sort</option>
+        <option>Quick Sort</option>
+        <option>Merge Sort</option>
+    </select>
+
+    <label>Speed:</label>
+    <input type="range" min="10" max="200" value="50" id="speed">
+
+    <button onclick="startSort()">Start</button>
+</div>
+
+<div id="array"></div>
+
+<p id="stats">Comparisons: 0 | Swaps: 0</p>
+
+<!-- 🔥 Time Complexity Display -->
+<div id="complexity">
+    <p>Time Complexity:</p>
+    <p id="best"></p>
+    <p id="avg"></p>
+    <p id="worst"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
